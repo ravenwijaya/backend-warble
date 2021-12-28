@@ -15,7 +15,6 @@ exports.createMessage = async function (req, res, next) {
     });
     return res.status(200).json(foundMessage);
   } catch (err) {
-    console.log(err);
     return next(err);
   }
 };
@@ -25,14 +24,14 @@ exports.getMessage = async function (req, res, next) {
     let message = await db.Message.findById(req.params.message_id);
     return res.status(200).json(message);
   } catch (err) {
-      return next(err);
+    return next(err);
   }
 };
 
 // DELETE /api/users/:id/messages/:message_id
 exports.deleteMessage = async function (req, res, next) {
   try {
-      console.log(req.params)
+    console.log(req.params);
     let foundMessage = await db.Message.findById(req.params.message_id);
     await foundMessage.remove();
     return res.status(200).json(foundMessage);
