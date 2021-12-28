@@ -1,0 +1,300 @@
+{
+	"info": {
+		"_postman_id": "ba648921-2a9d-4c46-8ebf-5f0580c01d37",
+		"name": "Random Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "signin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "raven@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "raven",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/auth/signin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"auth",
+						"signin"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "raven",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "raven",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "hacker",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "hacker",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "hacker@gmail.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/auth/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create message",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxY2FhNDZmOTA2Zjg3YTE2YzEwNWJiNyIsInVzZXJuYW1lIjoicmF2ZW4iLCJpYXQiOjE2NDA2NzAzMTl9.iM6MhK2wSJgHQL4-kNc6dn4Kr3cv7A28GPXc3Pajq2Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "text",
+							"value": "messagesssss",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/users/61caa46f906f87a16c105bb7/messages",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"users",
+						"61caa46f906f87a16c105bb7",
+						"messages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all messages",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxY2FhNDZmOTA2Zjg3YTE2YzEwNWJiNyIsInVzZXJuYW1lIjoicmF2ZW4iLCJpYXQiOjE2NDA2NzAzMTl9.iM6MhK2wSJgHQL4-kNc6dn4Kr3cv7A28GPXc3Pajq2Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/messages",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"messages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get message by id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxY2FhNDZmOTA2Zjg3YTE2YzEwNWJiNyIsInVzZXJuYW1lIjoicmF2ZW4iLCJpYXQiOjE2NDA2NzAzMTl9.iM6MhK2wSJgHQL4-kNc6dn4Kr3cv7A28GPXc3Pajq2Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "raven@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "raven",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/users/61caa46f906f87a16c105bb7/messages/61caaad339834987a394eeac",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"users",
+						"61caa46f906f87a16c105bb7",
+						"messages",
+						"61caaad339834987a394eeac"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "raven",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "raven",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete message by id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxY2FhNDZmOTA2Zjg3YTE2YzEwNWJiNyIsInVzZXJuYW1lIjoicmF2ZW4iLCJpYXQiOjE2NDA2NzAzMTl9.iM6MhK2wSJgHQL4-kNc6dn4Kr3cv7A28GPXc3Pajq2Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "raven@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "raven",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/users/61caa46f906f87a16c105bb7/messages/61caaad339834987a394eeac",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"users",
+						"61caa46f906f87a16c105bb7",
+						"messages",
+						"61caaad339834987a394eeac"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "raven",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "raven",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
